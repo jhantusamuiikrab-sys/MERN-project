@@ -51,7 +51,7 @@ const zoomVariants = (direction) => ({
   },
 });
 
-const App = () => {
+const AnimatedSlidebar = () => {
   const [mainImageIndex, setMainImageIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   // *** NEW: State to track if the component has mounted ***
@@ -163,4 +163,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AnimatedSlidebar;

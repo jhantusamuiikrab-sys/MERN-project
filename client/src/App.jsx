@@ -1,8 +1,11 @@
 import React from 'react'
+import SocialMediaMarketingPage from './pages/SocialMediaMarketingPage'
+
+
 
 function App() {
   return (
-    <div>App</div>
+    <div><SocialMediaMarketingPage/></div>
   )
 }
 
