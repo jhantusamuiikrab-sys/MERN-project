@@ -1,0 +1,22 @@
+*{
+    color: white;
+}
+#scroll_div {
+    /* FIX: Use valid CSS properties and make it stick to the top */
+    width: 100%; /* Must be 100% for scaleX to work from 0 to 100% */
+    height: 2vh;
+    background-color: red;
+    position: fixed; /* Keep the scrollbar progress indicator at the top */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure it's on top of other content */
+    
+    /* Sets the origin of the scale transformation to the left */
+    transform-origin: 0%; 
+}
+#scroll_h1{
+    text-align: center;
+}
+#scroll_h2{
+
+}
