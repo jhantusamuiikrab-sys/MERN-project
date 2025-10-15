@@ -1,11 +1,11 @@
 import React from 'react'
-import SocialMediaMarketingPage from './pages/SocialMediaMarketingPage'
+import GoogleAds from './pages/GoogleAds'
 
 
 
 function App() {
   return (
-    <div><SocialMediaMarketingPage/></div>
+    <div><GoogleAds/></div>
   )
 }
 

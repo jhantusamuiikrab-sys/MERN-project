@@ -237,7 +237,7 @@ const resultsData = [
 ];
 
 /* ---------------- COMPONENTS ---------------- */
-/* ---------------- CATEGORIES ---------------- */
+
 const categories = [
   "Home Services",
   "Medical",
@@ -269,8 +269,8 @@ const cardVariants = {
     scale: 1,
     transition: {
       type: "spring",
-      stiffness: 90,
-      damping: 14,
+      stiffness: 19,
+      damping: 24,
       delay: custom * 0.06, // wave effect per card
     },
   }),
@@ -338,7 +338,7 @@ const RemarkableResults = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 text-sm font-semibold rounded-full border-2 transition-all duration-300 focus:outline-none ${
+              className={`px-5 py-2 text-sm font-semibold rounded-full border-2 transition-all duration-300 focus:outline-none cursor-pointer ${
                 cat === activeCategory
                   ? "bg-[#CFA866] border-[#CFA866] text-[#0F0F0F] shadow-lg shadow-[#CFA866]/40 scale-105"
                   : "bg-transparent border-[#3A3A3A] text-[#9A9A9A] hover:border-[#CFA866] hover:text-[#EDEDED]"
@@ -353,7 +353,7 @@ const RemarkableResults = () => {
         <motion.div
           key={activeCategory}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          variants={containerVariants}
+          variants={  containerVariants}
           initial="hidden"
           animate="visible"
         >
