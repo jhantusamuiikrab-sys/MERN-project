@@ -1,12 +1,11 @@
-import React from 'react'
-import GoogleAds from './pages/GoogleAds'
-
-
+import BulkSms from "./pages/BulkSms";
 
 function App() {
   return (
-    <div><GoogleAds/></div>
-  )
+    <>
+      <BulkSms />
+    </>
+  );
 }
 
-export default App
+export default App;
