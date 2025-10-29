@@ -1,0 +1,48 @@
+@import "tailwindcss";
+.box{
+  height: 200px;
+  width: 200px;
+  background-color: crimson;
+  border: 3px solid white;
+}
+.circle{
+  height: 200px;
+  width: 200px;
+  background-color: lightblue;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+ 
+/* In your global CSS file (e.g., index.css) */
+ 
+/* The base class for the effect container */
+.animated-link {
+    position: relative;
+    /* Ensure the original text color is visible */
+    color: #1b2e4e;
+    transition: all 0.5s ease-in-out;
+}
+ 
+/* The pseudo-element that creates the colored 'fill' */
+.animated-link::before {
+    /* 1. Get the content from the data-item attribute */
+    content: attr(data-item);
+    /* 2. Set the custom color: #cfa866 */
+    color: #cfa866;
+    /* 3. Position it exactly over the original text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* 4. Start with 0 width and hide overflow */
+    overflow: hidden;
+    width: 0;
+    /* 5. Apply the transition for the smooth fill effect */
+    transition: all 0.5s ease-in-out;
+}
+ 
+/* On hover, expand the width of the colored pseudo-element to 100% */
+.animated-link:hover::before {
+    width: 100%;
+}

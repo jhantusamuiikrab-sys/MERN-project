@@ -1,0 +1,97 @@
+/* ========== T & N Logo Styles ========== */
+
+/* Container */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 50px auto;
+}
+
+/* Common shape styling */
+.custom-shape {
+  width: 120px;
+  height: 160px;
+  background: linear-gradient(135deg, #ff0048, #ff8a00);
+  position: relative;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+}
+
+.custom-shape:hover {
+  transform: scale(1.05) rotate(1deg);
+  filter: brightness(1.1);
+}
+
+/* ---------- T Shape ---------- */
+.custom-t-shape {
+  clip-path: polygon(
+    0% 0%,     /* Top-left */
+    100% 0%,   /* Top-right */
+    100% 20%,  /* Crossbar bottom */
+    60% 20%,   /* Right edge of stem */
+    60% 100%,  /* Bottom-right */
+    40% 100%,  /* Bottom-left */
+    40% 20%,   /* Left edge of stem */
+    0% 20%     /* Crossbar start */
+  );
+  transform: skewX(-6deg);
+}
+
+/* ---------- N Shape ---------- */
+.custom-n-shape {
+  clip-path: polygon(
+    0% 0%,     /* Top-left */
+    15% 0%,    /* Inner start of left stem */
+    85% 100%,  /* Diagonal down-right */
+    100% 100%, /* Bottom-right */
+    100% 0%,   /* Top-right */
+    85% 0%,    /* Inner top-right diagonal */
+    15% 100%,  /* Diagonal back to left bottom */
+    0% 100%    /* Bottom-left */
+  );
+  transform: skewX(-6deg);
+  margin-left: -25px; /* Overlap slightly with & */
+}
+
+/* ---------- & Symbol ---------- */
+.and-symbol {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: #ff0048;
+  transform: translateY(-10px);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.and-symbol:hover {
+  color: #ff8a00;
+  transform: scale(1.1) translateY(-10px);
+}
+
+/* Optional background if you want to test visually */
+body {
+  background: #f7f7f7;
+}
+
+/* for webdevfour section's */
+
+/* Custom CSS for the Marquee Effect */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    /* Translate left by 50% because the content is duplicated to 200% width */
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-animation {
+  /* Apply the animation */
+  animation: marquee 30s linear infinite; 
+  /* Adjust the '30s' value to change the speed */
+}
+

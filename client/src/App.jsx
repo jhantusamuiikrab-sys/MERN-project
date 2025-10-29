@@ -1,9 +1,10 @@
-import BulkSms from "./pages/BulkSms";
+
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
     <>
-      <BulkSms />
+      <TermsAndConditions />
     </>
   );
 }
